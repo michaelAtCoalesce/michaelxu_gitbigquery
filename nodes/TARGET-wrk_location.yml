@@ -1,0 +1,102 @@
+fileVersion: 1
+id: b9396c69-4fc3-4456-ad1d-169d381069cc
+name: wrk_location
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a25d9f88-d557-4fd5-aaf9-e1d0f7e74ff5
+          stepCounter: b9396c69-4fc3-4456-ad1d-169d381069cc
+        config: {}
+        dataType: INT64
+        description: ""
+        name: location_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 552e1d0d-2d39-4639-a6c6-ebbedfd6b459
+                stepCounter: 337e0e07-cdc8-4093-b7b0-6a6725c0880e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2374ea8f-e65f-44a6-a08a-7228760bf2ae
+          stepCounter: b9396c69-4fc3-4456-ad1d-169d381069cc
+        config: {}
+        dataType: STRING
+        description: ""
+        name: borough
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 421c2856-94f0-4c11-a73f-d25afa94fd72
+                stepCounter: 337e0e07-cdc8-4093-b7b0-6a6725c0880e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d0460e59-039a-4c27-a865-9f26c1215196
+          stepCounter: b9396c69-4fc3-4456-ad1d-169d381069cc
+        config: {}
+        dataType: STRING
+        description: ""
+        name: zone
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 30943fc6-43ea-44ff-b8bf-a27704f3a49b
+                stepCounter: 337e0e07-cdc8-4093-b7b0-6a6725c0880e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8a55967a-bca4-4a2f-b9ab-7fe0b58ae830
+          stepCounter: b9396c69-4fc3-4456-ad1d-169d381069cc
+        config: {}
+        dataType: STRING
+        description: ""
+        name: service_zone
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c7306cd3-6f49-46af-9ebf-24da12ed46ac
+                stepCounter: 337e0e07-cdc8-4093-b7b0-6a6725c0880e
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          location: 337e0e07-cdc8-4093-b7b0-6a6725c0880e
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: location
+        join:
+          joinCondition: FROM {{ ref('SRC', 'location') }} `location`
+        name: wrk_location
+        noLinkRefs: []
+  name: wrk_location
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
