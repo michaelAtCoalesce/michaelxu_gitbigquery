@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "336"
+mappingDefinitions:
+  SRC:
+    database: sales-eng-project
+    schema: NY_TAXI
+  TARGET:
+    database: sales-eng-project
+    schema: SJ_TEST
+name: bqtestenv
+type: Environment
