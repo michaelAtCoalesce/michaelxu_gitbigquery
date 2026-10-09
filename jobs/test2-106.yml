@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "106"
+includeSelector: "{ location: \"SRC\" name: \"location\" } OR { location: \"TARGET\" name: \"wrk_location\" }"
+name: test2
+type: Job
